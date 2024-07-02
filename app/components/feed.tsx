@@ -7,10 +7,10 @@ import { Link } from "@nextui-org/link";
 export function Feed() {
     return(
         <div>
-            <ScrollShadow hideScrollBar className="w-full h-[90dvh] md:w-[80vw] flex flex-col gap-y-3 justify-start items-start">
+            <ScrollShadow hideScrollBar size={30} className="w-full h-[90svh] md:w-[80vw] flex flex-col justify-start items-start">
             {users.map((user)=>(
                 <>
-                  <Link className="w-full flex flex-col justify-center p-3" isBlock href={"/chat/jaygupta17"} color="foreground">
+                  <Link className="w-full hover:bg-primary-900/10 flex flex-col justify-center p-3" href={"/jaygupta17"} color="foreground">
                   <Avatar key={user.name} name={user.name} img={user.img} descr={user.descr}/>
                   </Link>
                   <Divider />
