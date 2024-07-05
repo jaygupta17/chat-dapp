@@ -1,0 +1,20 @@
+#User : address
+                name
+                bio
+                pfp
+                address[] friends
+#Message : id
+                text
+                img/ipfshash
+                sender
+                time
+#FriendRequest : 
+                target
+#Web3
+>createUser : name,bio,pfp => user => addresstoUser[address] = User
+>createMessage : msg.sender==address => block.timestamp,text,img/ipfshash,sender,receiver => Message => user1ToUser2ToMessage[msg.sender][friendAddress].add(Message) => user1ToUser2ToMessage[friendAddress][msg.sender].add(Message)
+>sendFriendRequest : target,sender => msg.sender==sender => addressToFriendRequests[target][sender] => FriendRequest(target)
+>acceptFriendRequest : receiver,sender => msg.sender==receiver => delete addressToFriendRequests[receiver][sender] => addFriend(sender)
+>addFriend : userAddress => friends.add(userAddress)
+>getMessages : address,friendAddress => msg.sender==address => user1ToUser2ToMessage[address][friendAddress]
+
