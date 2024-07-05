@@ -1,5 +1,9 @@
+#Register form : name,email,id,bio
+                for web3 : default values from web2 => add connectwallet button => createUser
+
 #User : address
                 name
+                id
                 bio
                 pfp
                 address[] friends
@@ -11,7 +15,7 @@
 #FriendRequest : 
                 target
 #Web3
->createUser : name,bio,pfp => user => addresstoUser[address] = User
+>createUser : name,bio,pfp,id => user => addresstoUser[address] = User
 >createMessage : msg.sender==address => block.timestamp,text,img/ipfshash,sender,receiver => Message => user1ToUser2ToMessage[msg.sender][friendAddress].add(Message) => user1ToUser2ToMessage[friendAddress][msg.sender].add(Message)
 >sendFriendRequest : target,sender => msg.sender==sender => addressToFriendRequests[target][sender] => FriendRequest(target)
 >acceptFriendRequest : receiver,sender => msg.sender==receiver => delete addressToFriendRequests[receiver][sender] => addFriend(sender)
