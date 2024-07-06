@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
+import { AppwriteProvider } from "@/appwrite/context-wrapper";
 
 
 export const metadata: Metadata = {
@@ -32,6 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+    <AppwriteProvider>
+
     <html suppressHydrationWarning lang="en">
       <head />
       <body
@@ -45,5 +48,6 @@ export default function RootLayout({
         </Providers>
       </body>
     </html>
+    </AppwriteProvider>
   );
 }
