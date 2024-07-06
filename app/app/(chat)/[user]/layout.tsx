@@ -6,12 +6,11 @@ import { ReactNode } from "react";
 function Layout({children,params}:{children : ReactNode , params:{user: string}}) {
 
     return(
-                <div className="h-[90svh]">
+                <div className="h-[100svh] pt-2 px-2 overflow-hidden">
                     <Avatar name="Jay G" descr="Wierd" img="/vercel.svg"/>
-                    <ChatNav />
+                    <ChatNav/>
                     {children}
                 </div>
-        
     )
 }
 

@@ -3,7 +3,7 @@ import { Messages } from "@/components/messages";
 
 export default function page() {
     return(
-        <div className="flex gap-y-2 p-4 items-center flex-col">
+        <div className="h-[90svh] w-full p-4 grid">
             <Messages/>
             <MsgInput/>
         </div>

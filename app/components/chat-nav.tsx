@@ -14,7 +14,7 @@ export function ChatNav() {
                 </Link>
             </Button>
             <Button isDisabled={pathname=="/"+user+"/web3"} className="rounded-sm px-0" >
-                <Link href={"/"+user+"/web3"} className="h-full w-full flex justify-center text-foreground">
+                <Link href={"/"+user+"/web3/#last"} className="h-full w-full flex justify-center text-foreground">
                     Web3
                 </Link>
             </Button>
