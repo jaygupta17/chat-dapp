@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/navbar";
 import { Divider } from "@nextui-org/divider";
 import { Link } from "@nextui-org/link";
+import { ReactNode } from "react";
 
 export default function Layout({children}:{children:ReactNode}) {
     return(
